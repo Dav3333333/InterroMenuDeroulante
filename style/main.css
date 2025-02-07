@@ -1,0 +1,50 @@
+@import "./base/all.css";
+@import "./components/all.css";
+@import "./layouts/all.css";
+
+
+.visible{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: min-content;
+    height: 100vh;
+    background-color: var(--color-white--smoke);
+}
+
+#menu-btn{
+    display: none;
+    width: fit-content;
+}
+
+@media screen and (max-width:900px) {
+    .element-hidden{
+        display: none;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: var(--color-white--smoke);
+    }
+
+    .search-form {
+        /* top: 6rem; */
+        top: 2rem;
+        width: 40%;
+    }
+
+    .search-form .text-input{
+        width: 70%;
+    }
+
+    #menu-btn{
+        display: block;
+        cursor: pointer;
+        flex-direction: row;
+        row-gap:2px ;
+        border: 1px solid rgba(0, 0, 0, 0.616);
+        border-radius: 4px;
+        padding: 4px;
+    }
+}
